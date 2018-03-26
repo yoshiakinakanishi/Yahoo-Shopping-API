@@ -12,3 +12,7 @@
 - Postmanで返り値を確認する
 
 ```https://shopping.yahooapis.jp/ShoppingWebService/V1/json/categoryRanking?appid=dj00aiZpPVJxOUZRS0RpQkRHQyZzPWNvbnN1bWVyc2VjcmV0Jng9MWQ-&category_id=13457&callback=jsonpCallback```
+
+- Yahoo!ショッピングのカテゴリランキングAPIの仕様
+
+```https://devwloper.yahoo.co.jp/webapi/shopping/v1/categoryranking.html```
