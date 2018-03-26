@@ -1,6 +1,5 @@
-// 各カテゴリランキングのRouteコンポーネントのprops.path
-// /category/:idを設定して、match.params.idでURLに含まれるカテゴリIDが取得できるようにする
-// props.componentではなく、props.renderを使うことでRankingコンポーネントに最低限必要な値＝カテゴリIDのみを渡すようにしている
+// Routeコンポーネントのprops.pathで/category/:idを設定して、match.params.idでURLに含まれるカテゴリIDが取得できるようにする
+// props.componentではなく、props.renderを使うことで、Rankingコンポーネントに最低限必要な値＝カテゴリIDのみを渡すようする
 
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom'; // Switchを追加
@@ -18,11 +17,11 @@ class App extends Component {
 		
 		{/*
 		↓↓↓　削除　↓↓↓
-				<ul>
-					<li><Link to="/all">すべてのカテゴリ</Link></li>
-					<li><Link to="/category/2502">パソコン、周辺機器</Link></li>
-					<li><Link to="/category/10002">本、雑誌、コミック</Link></li>          
-				</ul>
+		<ul>
+			<li><Link to="/all">すべてのカテゴリ</Link></li>
+			<li><Link to="/category/2502">パソコン、周辺機器</Link></li>
+			<li><Link to="/category/10002">本、雑誌、コミック</Link></li>          
+		</ul>
 		*/}
 
 		<Switch>
