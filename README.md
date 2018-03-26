@@ -15,4 +15,4 @@
 
 - Yahoo!ショッピングのカテゴリランキングAPIの仕様
 
-```https://developer.yahoo.co.jp/webapi/shopping/v1/categoryranking.html```
+```https://developer.yahoo.co.jp/webapi/shopping/shopping/v1/categoryranking.html```
