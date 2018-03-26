@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { createStore, combineReducers, applyMiddleware } from 'redux';
-// import logger from 'redux-logger';
+// import { createStore, combineReducers, applyMiddleware } from 'redux'; // 削除
+// import logger from 'redux-logger'; // 削除
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux'; // 追加
 import createBrowserHistory from 'history/createBrowserHistory'; // 追加
 import App from './App';
-// import * as reducers from './reducers';
+// import * as reducers from './reducers'; // 削除
 import createStore from './createStore'; // 追加
 
 

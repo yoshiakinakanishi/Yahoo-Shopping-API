@@ -4,12 +4,13 @@
 // react-router-reduxを導入すると、ReduxのStoreを生成する処理が複雑になるので切り出しておく
 
 import {
-    // 名前が被るので別名でインポート
+    // 名前が被るため別名(reduxCreateStore)にしてインポートする
     createStore as reduxCreateStore,
     combineReducers,
     applyMiddleware
 } from 'redux';
 import logger from 'redux-logger';
+import thunk from 'redux-thunk'; // 追加
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 
 import * as reducers from './reducers';
@@ -19,12 +20,15 @@ export default function createStore(history) {
         combineReducers({
             ...reducers,
             // react-router-reduxのReducer
-            router: routerReducer,　//combineReducersにrouterReducerを追加すると、ルーティングの状態をReduxに同期できる
+            // combineReducersにrouterReducerを追加すると、ルーティングの状態をReduxに同期できる
+            router: routerReducer,
         }),
         applyMiddleware(
             logger,
+            thunk, // 追加
             // react-router-reduxのRedux Middleware
-            routerMiddleware(history)　//routerMiddlewareをRedux Middlewareに追加すると、ReduxのActionとしてページルーティングの制御ができる
+            // routerMiddlewareをReduxのapplyMiddlewareに追加すると、ReduxのActionとしてページルーティングの制御ができる    
+            routerMiddleware(history),
         )
     );
 }

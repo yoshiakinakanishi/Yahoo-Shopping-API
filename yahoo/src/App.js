@@ -1,9 +1,11 @@
-// 各カテゴリランキングのRouteコンポーネントのprops.pathは"/category/:id"を設定して、match.params.idでURLに含まれるカテゴリIDが取得できるようにする
-// props.componentではなく、props.renderを使うことで、Rankingコンポーネントに最低限必要な値＝カテゴリIDのみを渡すようにしている
+// 各カテゴリランキングのRouteコンポーネントのprops.path
+// /category/:idを設定して、match.params.idでURLに含まれるカテゴリIDが取得できるようにする
+// props.componentではなく、props.renderを使うことでRankingコンポーネントに最低限必要な値＝カテゴリIDのみを渡すようにしている
 
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import Ranking from './components/Ranking'
+// import Ranking from './components/Ranking';　// 削除
+import Ranking from './containers/Ranking'; // 定義したContainer componentを使用できるようにする
 
 class App extends Component {
   render() {
