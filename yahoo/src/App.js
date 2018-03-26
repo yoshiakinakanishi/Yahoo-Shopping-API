@@ -12,38 +12,38 @@ class App extends Component {
     return (
       <div className="App">
 		
-		{/* 追加 */}
-		<Nav />
+	{/* 追加 */}
+	<Nav />
 		
-		{/*
-		↓↓↓　削除　↓↓↓
-		<ul>
-			<li><Link to="/all">すべてのカテゴリ</Link></li>
-			<li><Link to="/category/2502">パソコン、周辺機器</Link></li>
-			<li><Link to="/category/10002">本、雑誌、コミック</Link></li>          
-		</ul>
-		*/}
+	{/*
+	↓↓↓　削除　↓↓↓
+	<ul>
+	  <li><Link to="/all">すべてのカテゴリ</Link></li>
+	  <li><Link to="/category/2502">パソコン、周辺機器</Link></li>
+	  <li><Link to="/category/10002">本、雑誌、コミック</Link></li>          
+	</ul>
+	*/}
 
-		<Switch>
-			{/* 総合ランキングのルート */}
-			<Route path = "/all" component={Ranking} />
+	<Switch>
+	  {/* 総合ランキングのルート */}
+	  <Route path = "/all" component={Ranking} />
 
-			<Route
-				path="/category/1"
-				render={
-					() => <Redirect to="/all" />
-				}
-			/>
+	  <Route
+	    path="/category/1"
+	    render={
+	     () => <Redirect to="/all" />
+	    }
+          />
 
-			{/* 各カテゴリのランキングルート */}
-			<Route 
-				path = "/category/:id" 
-				render={
-					({ match }) => <Ranking categoryId={match.params.id} />  
-				}
-			/>
-		</Switch>
-
+	{/* 各カテゴリのランキングルート */}
+	<Route 
+	  path = "/category/:id" 
+	  render={
+	   ({ match }) => <Ranking categoryId={match.params.id} />  
+	  }
+	  />
+       </Switch>
+	  
       </div>
     );
   }
