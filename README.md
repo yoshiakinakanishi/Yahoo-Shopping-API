@@ -1,4 +1,4 @@
-# Yahoo Shopping CategoryRanking API
+# Yahoo Shopping Category-Ranking API
 
 # API仕様
 - appid （発行したClientID）
