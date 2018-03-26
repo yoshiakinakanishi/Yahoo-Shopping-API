@@ -1,10 +1,10 @@
 // src/actions/Ranking.js
-import fetchJsonp from 'fetch-jsonp';
-import qs from 'qs';
+import fetchJsonp from 'fetch-jsonp'; // XMLHttpRequestの後継のfetch関数と同じJSONPのAPIと通信できるライブラリ
+import qs from 'qs';　// クエリ文字列を扱うライブラリ
 import { replace } from 'react-router-redux'; // 追加
 
 const API_URL = 'https://shopping.yahooapis.jp/ShoppingWebService/V1/json/categoryRanking';
-const APP_ID = 'dj00aiZpPVJxOUZRS0RpQkRHQyZzPWNvbnN1bWVyc2VjcmV0Jng9MWQ-';
+const APP_ID = 'dj00aiZpPVJxOUZRS0RpQkRHQyZzPWNvbnN1bWVyc2VjcmV0Jng9MWQ-';　// 取得したアプリケーションID
 
 // categoryをpayloadに含むように修正
 const startRequest = category => ({
