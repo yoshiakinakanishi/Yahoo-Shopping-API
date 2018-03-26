@@ -1,6 +1,5 @@
 # Yahoo Shopping Category-Ranking API
 
-# API仕様
 - appid （発行したClientID）
 
 ```dj00aiZpPVJxOUZRS0RpQkRHQyZzPWNvbnN1bWVyc2VjcmV0Jng9MWQ-```
